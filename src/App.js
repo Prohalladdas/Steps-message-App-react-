@@ -6,8 +6,16 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
-
 export default function App() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  )
+}
+
+function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true)
   // const [test, testStep] = useState({ name: "Naruto" });
@@ -19,14 +27,14 @@ export default function App() {
   function handleNext() {
     if (step < 3) {
       setStep((s) => s + 1)
-      setStep((s) => s + 1)
+      // setStep((s) => s + 1)
     }
 
     // testStep({ name: "Obito" })
 
   }
   return (
-    <>
+    <div>
       <button className="close" onClick={() => setIsOpen((is) => !is)}>
         &times;
       </button>
@@ -49,6 +57,6 @@ export default function App() {
         </div>
       )
       }
-    </>
+    </div>
   )
 }
